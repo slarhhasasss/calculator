@@ -2,11 +2,10 @@ package ru.kolesnikovdmitry.calculator
 
 import android.annotation.SuppressLint
 import android.os.Bundle
-import android.widget.Button
-import android.widget.ImageView
-import android.widget.TextView
+import android.widget.*
 import androidx.appcompat.app.AppCompatActivity
 import kotlin.math.sign
+
 
 class MainActivity : AppCompatActivity() {
 
@@ -22,6 +21,9 @@ class MainActivity : AppCompatActivity() {
         var curTextView : Int    = 1
         var curAns      : String = ""
 
+        val mScrollView : HorizontalScrollView = findViewById(R.id.scrollViewTest)
+        val mScrollViewSecond : HorizontalScrollView = findViewById(R.id.scrollViewSecond)
+
         val mTextViewFirst   : TextView = findViewById(R.id.textViewActMainFirstNum)
         val mTextViewSecond  : TextView = findViewById(R.id.textViewActMainSecondNum)
         val mTextViewOperand : TextView = findViewById(R.id.textViewActMainOperand)
@@ -32,13 +34,18 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "0"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
+
             } else {
                 secondStr += "0"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
-
-
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
         }
         val button1: Button = findViewById(R.id.button1)
@@ -46,13 +53,17 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "1"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             } else {
                 secondStr += "1"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
-
-
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
 
         }
@@ -61,13 +72,17 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "2"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             } else {
                 secondStr += "2"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
-
-
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
         }
         val button3: Button = findViewById(R.id.button3);
@@ -75,13 +90,17 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "3"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             } else {
                 secondStr += "3"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
-
-
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
         }
         val button4: Button = findViewById(R.id.button4);
@@ -89,13 +108,17 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "4"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             } else {
                 secondStr += "4"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
-
-
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
         }
         val button5: Button = findViewById(R.id.button5);
@@ -103,13 +126,17 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "5"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             } else {
                 secondStr += "5"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
-
-
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
         }
         val button6: Button = findViewById(R.id.button6);
@@ -117,13 +144,17 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "6"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             } else {
                 secondStr += "6"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
-
-
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
         }
         val button7: Button = findViewById(R.id.button7);
@@ -131,13 +162,17 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "7"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             } else {
                 secondStr += "7"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
-
-
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
         }
         val button8: Button = findViewById(R.id.button8);
@@ -145,13 +180,17 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "8"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             } else {
                 secondStr += "8"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
-
-
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
         }
         val button9: Button = findViewById(R.id.button9);
@@ -159,11 +198,17 @@ class MainActivity : AppCompatActivity() {
             if (curTextView == 1) {
                 firstStr += "9"
                 mTextViewFirst.text = firstStr
+                //прокрутка
+                mScrollView.post(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollView.postDelayed(Runnable { mScrollView.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             } else {
                 secondStr += "9"
                 curAns = calculate(firstStr, secondStr, curOperator)
                 mTextViewAns.text = "=$curAns"
                 mTextViewSecond.text = secondStr
+                //прокрутка
+                mScrollViewSecond.post(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) })
+                mScrollViewSecond.postDelayed(Runnable { mScrollViewSecond.fullScroll(HorizontalScrollView.FOCUS_RIGHT) }, 1000)
             }
         }
         //Answer
@@ -292,6 +337,8 @@ class MainActivity : AppCompatActivity() {
         val buttonPoint : Button = findViewById(R.id.buttonPoint)
         buttonPoint.setOnClickListener {
             var countPoints = 0
+            if(firstStr == "") return@setOnClickListener
+            if(curTextView == 2 && curOperator != "" && secondStr == "") return@setOnClickListener
             if(curTextView == 1 && curOperator == "") {
                 for (char in firstStr) {
                     if(char == '.') countPoints++
@@ -367,8 +414,14 @@ class MainActivity : AppCompatActivity() {
                 ans = firstNum / secondNum
             }
         }
-        return "$ans"
+        var ansStr = "$ans"
+        if(ansStr[ansStr.length - 1] == '0' && ansStr[ansStr.length - 2] == '.') {
+            return "${ans.toInt()}"
+        }
+        else {
+            return ansStr
+        }
+
+
     }
-
-
 }

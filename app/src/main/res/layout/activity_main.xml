@@ -1,9 +1,8 @@
 <?xml version="1.0" encoding="utf-8"?>
-<FrameLayout
-    xmlns:android="http://schemas.android.com/apk/res/android"
-    xmlns:app="http://schemas.android.com/apk/res-auto"
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
     xmlns:tools="http://schemas.android.com/tools"
     android:layout_width="match_parent"
+    android:background="#ffffff"
     android:layout_height="match_parent"
     tools:context=".MainActivity">
 
@@ -14,74 +13,88 @@
 
 
         <HorizontalScrollView
+            android:id="@+id/scrollViewTest"
             android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15sp"
             android:layout_gravity="end"
-            android:layout_height="60sp"
-            android:descendantFocusability="afterDescendants">
+            android:layout_weight="0.1">
 
             <TextView
                 android:id="@+id/textViewActMainFirstNum"
-                style="@style/TextViewCalcTheme"
-                android:layout_marginEnd="15sp"/>
+                android:textColor="#000000"
+                style="@style/TextViewCalcTheme" />
 
         </HorizontalScrollView>
 
-        <TextView
-            android:id="@+id/textViewActMainOperand"
-            style="@style/TextViewCalcTheme"
-            android:layout_margin="15sp"/>
-
         <HorizontalScrollView
             android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15sp"
             android:layout_gravity="end"
-            android:layout_height="60sp"
-            android:descendantFocusability="afterDescendants">
+            android:layout_weight="0.1">
+
+            <TextView
+                android:id="@+id/textViewActMainOperand"
+                android:textColor="#00BCD4"
+                style="@style/TextViewCalcTheme" />
+
+
+        </HorizontalScrollView>
+
+        <HorizontalScrollView
+            android:id="@+id/scrollViewSecond"
+            android:layout_width="wrap_content"
+            android:layout_height="0dp"
+            android:layout_marginEnd="15sp"
+            android:layout_gravity="end"
+            android:layout_weight="0.1">
 
             <TextView
                 android:id="@+id/textViewActMainSecondNum"
                 style="@style/TextViewCalcTheme"
-                android:layout_margin="15sp"/>
+                android:textColor="#000000"/>
 
         </HorizontalScrollView>
 
 
         <HorizontalScrollView
             android:layout_width="wrap_content"
-            android:layout_gravity="end"
-            android:layout_height="60sp"
-            android:descendantFocusability="afterDescendants">
+            android:layout_height="0dp"
+            android:layout_marginEnd="15sp"
+            android:layout_weight="0.1"
+            android:layout_gravity="end">
 
-        <TextView
-            android:id="@+id/textViewActMainAns"
-            style="@style/TextViewCalcTheme"
-            android:textStyle="italic"
-            android:layout_margin="15sp"/>
+            <TextView
+                android:id="@+id/textViewActMainAns"
+                style="@style/TextViewCalcTheme"
+                android:textStyle="italic" />
 
         </HorizontalScrollView>
 
         <LinearLayout
             android:layout_width="match_parent"
+            android:layout_height="0dp"
             android:layout_gravity="bottom"
-            android:layout_height="500sp"
-            android:orientation="vertical">
+            android:orientation="vertical"
+            android:layout_weight="0.6">
 
-            <LinearLayout
-                style="@style/RowLinearLayBtns">
+            <LinearLayout style="@style/RowLinearLayBtns">
 
                 <Button
                     android:id="@+id/buttonPlus"
                     style="@style/ButtonsCalcTheme"
-                    android:text="+"/>
+                    android:text="+" />
 
                 <Button
                     android:id="@+id/buttonMinus"
                     style="@style/ButtonsCalcTheme"
-                    android:text="-"/>
+                    android:text="-" />
 
                 <Button
                     android:id="@+id/buttonMultiplic"
-                    android:text="*"
-                    style="@style/ButtonsCalcTheme"/>
+                    style="@style/ButtonsCalcTheme"
+                    android:text="*" />
 
                 <Button
                     android:id="@+id/buttonDivision"
@@ -90,90 +103,86 @@
 
             </LinearLayout>
 
-            <LinearLayout
-                style="@style/RowLinearLayBtns">
+            <LinearLayout style="@style/RowLinearLayBtns">
 
                 <Button
                     android:id="@+id/button1"
-                    android:text="1"
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="1" />
 
                 <Button
                     android:id="@+id/button2"
-                    android:text="2"
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="2" />
 
                 <Button
                     android:id="@+id/button3"
-                    android:text="3"
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="3" />
 
                 <ImageView
                     android:id="@+id/buttonDelete"
-                    android:src="@drawable/ic_backspace"
-                    android:layout_height="match_parent"
                     android:layout_width="87sp"
-                    android:layout_weight="1" />
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:src="@drawable/ic_backspace" />
 
             </LinearLayout>
 
-            <LinearLayout
-                style="@style/RowLinearLayBtns">
+            <LinearLayout style="@style/RowLinearLayBtns">
 
                 <Button
                     android:id="@+id/button4"
-                    android:text="4"
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="4" />
 
                 <Button
                     android:id="@+id/button5"
-                    android:text="5"
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="5" />
 
                 <Button
                     android:id="@+id/button6"
-                    android:text="6"
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="6" />
 
                 <Button
                     android:id="@+id/buttonC"
-                    android:text="C"
-                    style="@style/ButtonsCalcTheme"/>
+                    style="@style/ButtonsCalcTheme"
+                    android:text="C" />
 
             </LinearLayout>
 
-            <LinearLayout
-                style="@style/RowLinearLayBtns">
+            <LinearLayout style="@style/RowLinearLayBtns">
 
                 <Button
                     android:id="@+id/button7"
-                    android:text="7"
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="7" />
 
                 <Button
                     android:id="@+id/button8"
-                    android:text="8"
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="8" />
 
                 <Button
                     android:id="@+id/button9"
-                    android:text="9"
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="9" />
 
                 <Button
                     android:id="@+id/buttonPM"
-                    android:text="+-"
-                    style="@style/ButtonsCalcTheme"/>
+                    style="@style/ButtonsCalcTheme"
+                    android:text="+-" />
 
             </LinearLayout>
 
-            <LinearLayout
-                style="@style/RowLinearLayBtns">
+            <LinearLayout style="@style/RowLinearLayBtns">
 
                 <Button
                     android:id="@+id/buttonPoint"
-                    android:text="."
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="." />
 
                 <Button
                     android:id="@+id/button0"
@@ -182,13 +191,13 @@
 
                 <Button
                     android:id="@+id/buttonAns"
-                    android:text="="
-                    style="@style/ButtonsCalcTheme" />
+                    style="@style/ButtonsCalcTheme"
+                    android:text="=" />
 
                 <Button
                     android:id="@+id/buttonNONO"
-                    android:text=""
-                    style="@style/ButtonsCalcTheme"/>
+                    style="@style/ButtonsCalcTheme"
+                    android:text="" />
 
             </LinearLayout>
 
@@ -196,14 +205,6 @@
 
 
     </LinearLayout>
-
-
-
-
-
-
-
-
 
 
 </FrameLayout>

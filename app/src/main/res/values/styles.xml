@@ -5,12 +5,12 @@
         <!-- Customize your theme here. -->
         <item name="colorPrimary">#8C51E1</item>
         <item name="colorPrimaryDark">#5C33A5</item>
-        <item name="android:colorBackground">#ADEFE9</item>
+        <item name="android:colorBackground">#FFEB3B</item>
         <item name="colorAccent">#B0ECE6</item>
     </style>
 
     <style name="ButtonsCalcTheme">
-        <item name="android:background">#ADEFE9</item>
+        <item name="android:background">#FFEB3B</item>
         <item name="android:textSize">60sp</item>
         <item name="android:layout_weight">1</item>
         <item name="android:layout_height">match_parent</item>
@@ -21,8 +21,8 @@
         <item name="android:layout_weight">1</item>
         <item name="android:layout_height">wrap_content</item>
         <item name="android:gravity">center|right</item>
-        <item name="android:layout_width">match_parent</item>
-        <item name="android:textSize">40sp</item>
+        <item name="android:layout_width">wrap_content</item>
+        <item name="android:textSize">45sp</item>
     </style>
 
     <style name="RowLinearLayBtns">
